@@ -1,0 +1,12 @@
+version: "3"
+services:
+    whatsapp-chatgpt:
+        image: ghcr.io/siddhantsingh-25/whatsapp-gpt-dalle:master
+        environment:
+            OPENAI_API_KEY: ""
+            OPENAI_GPT_MODEL: ""
+            PREFIX_ENABLED: ""
+        volumes:
+            - session-data:/app/session
+volumes:
+    session-data:
