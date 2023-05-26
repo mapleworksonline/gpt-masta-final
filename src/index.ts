@@ -24,18 +24,18 @@ const start = async () => {
         const bot = createBot(from, token);
 
         await bot.startExpressServer({
-            port: 8080,
+            port: 3000,
             webhookVerifyToken,
         });
 
 		botReadyTimestamp = new Date();
-
+        console.log("####BotReadyTimeStamp: ", botReadyTimestamp);
 		initAiConfig();
 		initOpenAI();
         // Listen to ALL incoming messages
         // NOTE: remember to always run: await bot.startExpressServer  first
         bot.on('message', async (msg) => {
-            console.log("####msg: ", msg);
+            console.log("####Inputmsg: ", msg);
             const inputMsg = await stateMachine.processInput(msg);
             const response : responseTemplate = await stateMachine.getOutput(inputMsg) || { type: "text", bodyText: "Error in Message handling, Please Try Again" };
             console.log("####response: ", response);
