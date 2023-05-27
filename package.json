@@ -5,7 +5,7 @@
 	"main": "src/index.ts",
 	"author": "siddhant",
 	"scripts": {
-		"start": "npx vite-node src/index.ts",
+		"start": "npx vite-node src/index.ts >> ./logs.txt",
 		"prettier": "prettier --write ."
 	},
 	"license": "",

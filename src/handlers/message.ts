@@ -15,7 +15,7 @@ import { handleMessageDALLE } from "../handlers/dalle";
 import { botReadyTimestamp } from "../index";
 
 const salutationArr = ['hi', 'hello', 'hey'];
-const salutationResponse = `Hello there😄!\nThank you for using *GPT Mobile*!\n\nDirectly send messages and prompts to me and I'll get them for you using the same engine as ChatGPT\n\nTo generate images type "image" before the prompt.\n\nEx- "image bugatti chiron"`;
+const salutationResponse = `Hello there😄!\nThank you for using *GPT Masta*!\n\nDirectly send messages and prompts to me and I'll get them for you using the same engine as ChatGPT\n\nTo generate images type "image" before the prompt.\n\nEx- "image bugatti chiron"`;
 
 export class StateMachine {
 
